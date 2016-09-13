@@ -52,8 +52,8 @@ def upload_file(request):
             write_file(request.FILES['file'])
             return HttpResponseRedirect('index.html')
     else:
-        form = UploadFileForm()
-        return render(request, 'index.html', {'form': form})
+        #form = UploadFileForm()
+        return render(request, 'index.html')
 def myview(request):
     request.FILES['myfile']
 
