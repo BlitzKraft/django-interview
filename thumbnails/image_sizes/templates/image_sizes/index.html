@@ -192,6 +192,7 @@ table tr:hover td {
 </tr>
 </table>
 <form method="post" enctype="multipart/form-data" action="image_sizes/upload">
+    {% csrf_token %}
     <input type="file" name="myfile" />
     <input type="submit" name="upload_file" value="Upload file" />
 </form>
