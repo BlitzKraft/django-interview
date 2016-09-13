@@ -1,0 +1,48 @@
+=== Rooster thumbnail overload! ===
+
+
+Problem description
+--------------------------
+
+    Eek!  There's a *bazillion* thumbnail images on Rooster and it's getting out of hand!
+
+    We know users upload all sorts of pictures of stuff they have to give away.
+    And they upload pics of their friendly faces too.
+
+    But after a series of visual redesigns over the years... us Rooster programmer
+    folk no longer have a good sense of what thumbnail sizes we're using!
+    That's not good.
+
+
+What to do:
+----------
+
+    Write a program which displays a report of thumbnail sizes on Rooster.
+
+    Why?  ...so we can bring it to our design team to decide what *really* are the thumbnail sizes we should use on the website!
+
+    You can use as input the following file:  http://paloalto.therooster.co/static/fun-rooster-thumbnail-names.txt
+
+    What this file contains is the absolute URL of a sample of thumbnail images on Rooster on every line.
+    (you might notice there is a consistent pattern to them!).
+
+    Python honestly would be preferable.  But not at all a requirement!
+
+    And just for clarity, as sample output, the report might indicate something like "700x250 thumbnail occurs 25 times" (and so on)
+
+
+Other random "extra credit" things:
+-----------------------------------
+
+    If bored, you might make a Django app (because we use Django!)
+    which has a text file upload input, and outputs the report on a webpage!
+
+    You might even spice up a report like this in the view with HTML/CSS/JS/template stuff.
+    And/or basically whatever you want/random stuff etc. etc.
+    Maybe you can sort by count?  Maybe you can filter by width or height?  A command line option for that would work for that too probably!
+    Maybe even a model to save a report?
+
+    Maybe find where a particular thumbnail is used on Rooster, if it's even still being used!  (hint: 'View Source' or 'Inspect element')
+
+    Or really anything you think might be fun :D   (doesn't need to make sense <3)
+
