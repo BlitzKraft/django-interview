@@ -12,3 +12,6 @@ project folder.
 
 The server is initialized on port 3000, and can be reached by the following link:
 127.0.0.1:3000
+
+Once the page loads, a table is displayed and is sortable by clicking on the
+specific column heading.

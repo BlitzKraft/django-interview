@@ -1,5 +1,7 @@
+{% load staticfiles %}
 <head>
     <title>Test for rooster</title>
+    <script src="{% static 'image_sizes/sorttable.js' %}"></script>
 </head>
 <style type="text/css">
 
@@ -173,11 +175,17 @@ table tr:hover td {
 	background: -webkit-gradient(linear, left top, left bottom, from(#f2f2f2), to(#f0f0f0));
 	background: -moz-linear-gradient(top,  #f2f2f2,  #f0f0f0);	
 }
+/*
+This is for the sorttable.js. Displays the arrows for sorting.
+*/
+table.sortable th:not(.sorttable_sorted):not(.sorttable_sorted_reverse):not(.sorttable_nosort):after { 
+	content: " \25B4\25BE" 
+}
 </style>
 <body>
-<table>
+<table class="sortable">
 	<thead>
-		<th> Thumbnail Size </th>
+		<th class="sorttable_numeric"> Thumbnail Size </th>
 		<th> Count </th>
 	</thead>
 {% for x, y in lst %}
@@ -190,9 +198,11 @@ table tr:hover td {
 	</td>
 </tr>
 {% endfor %}
-<tr>
-	<td><b> Total </b> </td>
-	<td><b> {{total}} </b> </td>
-</tr>
+<tfoot>
+	<tr>
+		<td><b> Total </b> </td>
+		<td><b> {{total}} </b> </td>
+	</tr>
+</tfoot>
 </table>
 </body>
